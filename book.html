@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Machine - McComas Gym</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, footer {
+            flex: 5%;
+        }
+
+        main {
+            flex: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .booking-form {
+            text-align: center;
+        }
+
+        .booking-form input {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .booking-button {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .machine-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .machine-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .machine-list li {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .occupancy-table {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .occupancy-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .occupancy-table table, .occupancy-table th, .occupancy-table td {
+            border: 1px solid #ddd;
+        }
+
+        .occupancy-table th, .occupancy-table td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .booking-form label {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>McComas Gym</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="book.html">Book a Machine</a></li>
+            </ul>
+        </nav>
+        <button class="login-button" onclick="login()">Login</button>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </header>
+
+    <main class="booking">
+        <h2>Book a Machine</h2>
+        <p>Reserve a machine for your workout session at McComas Gym. Choose from a variety of machines to meet your fitness needs.</p>
+        <div class="machine-list">
+            <ul>
+                <li>Chest Press Machine</li>
+                <li>Treadmill</li>
+                <li>Elliptical Trainer</li>
+                <li>Leg Press Machine</li>
+                <li>Rowing Machine</li>
+                <li>Stationary Bike</li>
+                <li>Dumbbell Rack</li>
+                <li>Pull-Up Bar</li>
+                <li>Smith Machine</li>
+                <li>Lat Pulldown Machine</li>
+                <li>Leg Extension Machine</li>
+                <li>Shoulder Press Machine</li>
+                <li>Abdominal Bench</li>
+                <li>Leg Curl Machine</li>
+                <li>Seated Row Machine</li>
+                <li>Bench Press Rack</li>
+                <li>Barbell Squat Rack</li>
+                <li>Cardio Step Machine</li>
+                <li>Preacher Curl Bench</li>
+                <li>Hip Thrust Machine</li>
+            </ul>
+        </div>
+
+        <div class="booking-form">
+            <h3>Booking Details</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" name="student-id" required><br>
+
+                <label for="machine-name">Machine Name:</label>
+                <input type="text" id="machine-name" name="machine-name" required><br>
+
+                <button class="booking-button" type="submit">Book Now</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2023 McComas Gym. All Rights Reserved.</p>
+            <p>123 Main Street, Gymville, 12345</p>
+            <p>Contact: info@mccomasgym.com | Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+
+    <script>
+        // Replace these functions with actual login/logout logic
+        function login() {
+            alert('Login button clicked');
+        }
+
+        function logout() {
+            alert('Logout button clicked');
+        }
+    </script>
+</body>
+</html>

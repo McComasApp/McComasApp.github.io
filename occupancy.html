@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Availability</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Machine Names</th>
+            <th>9am - 10am</th>
+            <th>10am - 11am</th>
+            <th>11am - 12pm</th>
+            <th>12pm - 1pm</th>
+            <th>1pm - 2pm</th>
+            <th>2pm - 3pm</th>
+            <th>3pm - 4pm</th>
+            <th>4pm - 5pm</th>
+            <th>5pm - 6pm</th>
+            <th>6pm - 7pm</th>
+            <th>7pm - 8pm</th>
+            <th>8pm - 9pm</th>
+        </tr>
+        <tr>
+            <td>Chest Press Machine</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Treadmill</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Elliptical Trainer</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Leg Press Machine</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Rowing Machine</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Stationary Bike</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Dumbbell Rack</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Pull-Up Bar</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Smith Machine</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Lat Pulldown Machine</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Leg Extension Machine</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Shoulder Press Machine</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Abdominal Bench</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Leg Curl Machine</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Seated Row Machine</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Bench Press Rack</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Barbell Squat Rack</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Cardio Step Machine</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Preacher Curl Bench</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Hip Thrust Machine</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+    </table>
+</body>
+</html>
