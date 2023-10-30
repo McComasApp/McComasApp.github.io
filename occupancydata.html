@@ -57,7 +57,10 @@
             <!-- <a class="cta-button" href="book.html">Book a machine</a> -->
             <p>Get pumped with a set of fitness machines and stop waiting in lines.</p>
         </div>
+
         <div class="occupancy-chart">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br>
             <canvas id="occupancyGraph"></canvas>
         </div>
     </main>
@@ -88,7 +91,7 @@
 
         // Dummy data for occupancy graph
         const labels = ['8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM'];
-        const data = [30, 40, 35, 45, 50, 60];
+        const data = [90, 110, 135, 145, 150, 80];
 
         // Create the occupancy graph
         const ctx = document.getElementById('occupancyGraph').getContext('2d');

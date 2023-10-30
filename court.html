@@ -148,7 +148,7 @@
                 <li onclick="selectCourt(this)"><a href="#">Racquetball Court</a></li>
             </ul>
         </div>
-
+        <a href="occupancy1.html" onclick="openOccupancyPopup(); return false;">Check Occupancy</a>
         <div class="booking-form">
             <h3>Booking Details</h3>
             <form>
@@ -193,6 +193,10 @@
                 court.classList.remove("selected");
             });
             courtElement.classList.add("selected");
+        }
+        function openOccupancyPopup() {
+            var popupOptions = "width=800, height=600"; // Adjust the size as needed
+            window.open("occupancy1.html", "OccupancyPopup", popupOptions);
         }
     </script>
 </body>
