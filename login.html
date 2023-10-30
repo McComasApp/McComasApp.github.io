@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Machine - McComas Gym</title>
+    <title>Login - McComas Gym</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         html {
@@ -124,55 +124,21 @@
                 <li><a href="class.html">Book a Class</a></li>
             </ul>
         </nav>
-        <!-- <button class="login-button" onclick="login()">Login</button> -->
+        <button class="login-button" onclick="login()">Login</button>
         <button class="logout-button" onclick="logout()">Logout</button>
     </header>
 
     <main class="booking">
-        <h2>Book a Machine</h2>
-        <p>Reserve a machine for your workout session at McComas Gym. Choose from a variety of machines to meet your fitness needs.</p>
-        <div class="machine-list">
-            <ul>
-                <li>Chest Press Machine</li>
-                <li>Treadmill</li>
-                <li>Elliptical Trainer</li>
-                <li>Leg Press Machine</li>
-                <li>Rowing Machine</li>
-                <li>Stationary Bike</li>
-                <li>Dumbbell Rack</li>
-                <li>Pull-Up Bar</li>
-                <li>Smith Machine</li>
-                <li>Lat Pulldown Machine</li>
-                <li>Leg Extension Machine</li>
-                <li>Shoulder Press Machine</li>
-                <li>Abdominal Bench</li>
-                <li>Leg Curl Machine</li>
-                <li>Seated Row Machine</li>
-                <li>Bench Press Rack</li>
-                <li>Barbell Squat Rack</li>
-                <li>Cardio Step Machine</li>
-                <li>Preacher Curl Bench</li>
-                <li>Hip Thrust Machine</li>
-            </ul>
-        </div>
-        <a href="occupancy.html" onclick="openOccupancyPopup(); return false;">Check Occupancy</a>
+        <h2>Login</h2>
 
         <div class="booking-form">
-            <h3>Booking Details</h3>
             <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
 
-                <label for="student-id">Student ID:</label>
-                <input type="text" id="student-id" name="student-id" required><br>
-
-                <label for="machine-name">Machine Name:</label>
-                <input type="text" id="machine-name" name="machine-name" required><br>
-
-                <label for="slot-time">Slot Time:</label>
-                <input type="text" id="slot-time" name="slot-time" required><br>
-
-                <button class="booking-button" type="submit">Book Now</button>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <a class="booking-button" href="home.html">Login</a>
             </form>
         </div>
     </main>
@@ -197,12 +163,6 @@
 
         function logout() {
             alert('Logout button clicked');
-            window.location.href = "index.html";
-
-        }
-        function openOccupancyPopup() {
-            var popupOptions = "width=800, height=600"; // Adjust the size as needed
-            window.open("occupancy.html", "OccupancyPopup", popupOptions);
         }
     </script>
 </body>

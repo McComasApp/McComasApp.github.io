@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - McComas Gym</title>
+    <title>McComas Gym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cta {
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+            /* Rounded corners for the container */
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>McComas Gym</h1>
@@ -17,25 +37,17 @@
                 <li><a href="class.html">Book a Class</a></li>
             </ul>
         </nav>
+        <!-- Replace the following with your login/logout logic -->
         <!-- <button class="login-button" onclick="login()">Login</button> -->
         <button class="logout-button" onclick="logout()">Logout</button>
     </header>
-
-    <main class="about-us">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>Welcome to McComas Gym, your ultimate fitness destination!</p>
-            <p>Our mission is to provide a top-notch fitness experience to help you achieve your health and fitness goals. With state-of-the-art equipment, expert trainers, and a motivating environment, we're here to support your journey to a healthier you.</p>
-            <p>Key Features:</p>
-            <ul>
-                <li>Modern workout equipment</li>
-                <li>Experienced trainers</li>
-                <li>Group fitness classes</li>
-                <li>Clean and spacious facilities</li>
-            </ul>
-        </div>
-        <div class="about-image">
-            <img src="interior.jpg" alt="McComas Gym Interior">
+    <main>
+        <div class="cta">
+            <p>Reserve a slot for a class today!</p>
+            <a class="cta-button" href="class.html">Book a Class</a>
+            <p>Explore our wide range of fitness classes to stay active and healthy.</p>
+            <a class="cta-button" href="book.html">Book a machine</a>
+            <p>Get pumped with a set of fitness machines and stop waiting in lines.</p>
         </div>
     </main>
 
@@ -54,7 +66,8 @@
     <script>
         // Replace these functions with actual login/logout logic
         function login() {
-            alert('Login button clicked');
+            alert('This will redirect you to a page where you can login with your username and password. If you wish to make a new account please click join us to make a new account.');
+            window.open("login.html");
         }
 
         function logout() {
@@ -63,4 +76,5 @@
         }
     </script>
 </body>
+
 </html>

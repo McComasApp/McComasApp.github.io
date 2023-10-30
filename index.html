@@ -32,20 +32,21 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="book.html">Book a Machine</a></li>
+                <li onclick="login()">About Us</a></li>
+                <li onclick="login()">Book a Machine</li>
+                <li onclick="login()">Book a Class</li>
             </ul>
         </nav>
         <!-- Replace the following with your login/logout logic -->
         <button class="login-button" onclick="login()">Login</button>
-        <button class="logout-button" onclick="logout()">Logout</button>
+        <!-- <button class="logout-button" onclick="logout()">Logout</button> -->
     </header>
     <main>
         <div class="cta">
             <p>Reserve a slot for a class today!</p>
-            <a class="cta-button" href="book.html">Book a Class</a>
+            <a class="cta-button" href="login.html">Book a Class</a>
             <p>Explore our wide range of fitness classes to stay active and healthy.</p>
-            <a class="cta-button" href="membership.html">Join Now</a>
+            <a class="cta-button" href="join.html">Join Now</a>
             <p>Join McComas Gym now and experience a healthier, fitter you!</p>
         </div>
     </main>
@@ -65,7 +66,8 @@
     <script>
         // Replace these functions with actual login/logout logic
         function login() {
-            alert('Login button clicked');
+            alert('This will redirect you to a page where you can login with your username and password. If you wish to make a new account please click join us to make a new account.');
+            window.location.href = "login.html";
         }
 
         function logout() {

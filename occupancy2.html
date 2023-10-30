@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Availability</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Machine Names</th>
+            <th>9am - 10am</th>
+            <th>10am - 11am</th>
+            <th>11am - 12pm</th>
+            <th>12pm - 1pm</th>
+            <th>1pm - 2pm</th>
+            <th>2pm - 3pm</th>
+            <th>3pm - 4pm</th>
+            <th>4pm - 5pm</th>
+            <th>5pm - 6pm</th>
+            <th>6pm - 7pm</th>
+            <th>7pm - 8pm</th>
+            <th>8pm - 9pm</th>
+        </tr>
+        <tr>
+            <td>Barre</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>BODYPUMP</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Cardio Dance</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Quick CORE</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Cycle</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Cycle &</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>F45</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Full Body Basics</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>GRIT</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>LES MILLS CORE</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Pilates</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Pilates Sculpt</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>POP Pilates</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Power Yoga</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Power Vinyasa</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Vinyasa Flow</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Yoga</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Yogalates</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Yoga & Meditation</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Not Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+    </table>
+</body>
+</html>
