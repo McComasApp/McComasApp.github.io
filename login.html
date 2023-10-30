@@ -122,10 +122,12 @@
                 <li onclick="login()">About Us</a></li>
                 <li onclick="login()">Book a Machine</li>
                 <li onclick="login()">Book a Class</li>
+                <li onclick="login()">Real Time Occupancy</li>
+                <li onclick="login()">Reserve a Court</li>
             </ul>
         </nav>
-        <button class="login-button" onclick="login()">Login</button>
-        <button class="logout-button" onclick="logout()">Logout</button>
+        <button class="login-button" onclick="login()">Sign Up</button>
+        <!-- <button class="logout-button" onclick="logout()">Logout</button> -->
     </header>
 
     <main class="booking">
@@ -158,7 +160,8 @@
     <script>
         // Replace these functions with actual login/logout logic
         function login() {
-            alert('Please login to continue');
+            alert('Diverting you to create a new account.');
+            window.location.href="join.html";
         }
 
         function logout() {

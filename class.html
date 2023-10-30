@@ -79,6 +79,12 @@
             background-color: #f0f0f0;
             border: 1px solid #ddd;
             border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .machine-list li.selected {
+            background-color: #6a3122; /* Selected background color */
+            color: #fff; /* Text color for selected class */
         }
 
         a {
@@ -122,9 +128,10 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="book.html">Book a Machine</a></li>
                 <li><a href="class.html">Book a Class</a></li>
+                <li><a href="occupancydata.html">Real Time Occupancy</a></li>
+                <li><a href="court.html">Reserve a Court</a></li>
             </ul>
         </nav>
-        <!-- <button class="login-button" onclick="login()">Login</button> -->
         <button class="logout-button" onclick="logout()">Logout</button>
     </header>
 
@@ -133,25 +140,25 @@
         <p>Reserve a class for your workout session at McComas Gym. Choose from a variety of classes to meet your fitness needs.</p>
         <div class="machine-list">
             <ul>
-                <li>Barre</li>
-                <li>BODYPUMP</li>
-                <li>Cardio Dance</li>
-                <li>Quick CORE</li>
-                <li>Cycle</li>
-                <li>Cycle &</li>
-                <li>F45</li>
-                <li>Full Body Basics</li>
-                <li>GRIT</li>
-                <li>LES MILLS CORE</li>
-                <li>Pilates</li>
-                <li>Pilates Sculpt</li>
-                <li>POP Pilates</li>
-                <li>Power Yoga</li>
-                <li>Power Vinyasa</li>
-                <li>Vinyasa Flow</li>
-                <li>Yoga</li>
-                <li>Yogalates</li>
-                <li>Yoga & Meditation</li>
+                <li onclick="selectMachine(this)"><a href="#">Barre</a></li>
+                <li onclick="selectMachine(this)"><a href="#">BODYPUMP</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Cardio Dance</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Quick CORE</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Cycle</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Cycle &</a></li>
+                <li onclick="selectMachine(this)"><a href="#">F45</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Full Body Basics</a></li>
+                <li onclick="selectMachine(this)"><a href="#">GRIT</a></li>
+                <li onclick="selectMachine(this)"><a href="#">LES MILLS CORE</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Pilates</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Pilates Sculpt</a></li>
+                <li onclick="selectMachine(this)"><a href="#">POP Pilates</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Power Yoga</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Power Vinyasa</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Vinyasa Flow</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Yoga</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Yogalates</a></li>
+                <li onclick="selectMachine(this)"><a href="#">Yoga & Meditation</a></li>
             </ul>
         </div>
         <a href="occupancy2.html" onclick="openOccupancyPopup(); return false;">Check Occupancy</a>
@@ -165,11 +172,11 @@
                 <label for="student-id">Student ID:</label>
                 <input type="text" id="student-id" name="student-id" required><br>
 
-                <label for="machine-name">Class Name:</label>
-                <input type="text" id="machine-name" name="machine-name" required><br>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required><br>
 
-                <label for="slot-time">Slot Time:</label>
-                <input type="text" id="slot-time" name="slot-time" required><br>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required><br>
 
                 <button class="booking-button" type="submit">Book Now</button>
             </form>
@@ -181,7 +188,7 @@
             <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
         </div>
-        <div class="footer-info">
+        <div class "footer-info">
             <p>&copy; 2023 McComas Gym. All Rights Reserved.</p>
             <p>895 Washington St SW, Blacksburg, VA 24060</p>
             <p>Contact: recsports@vt.edu | Phone: (540) 231-6856</p>
@@ -189,16 +196,19 @@
     </footer>
 
     <script>
-        // Replace these functions with actual login/logout logic
-        function login() {
-            alert('Login button clicked');
-        }
-
         function logout() {
             alert('Logout button clicked');
             window.location.href = "index.html";
-
         }
+
+        function selectMachine(machineElement) {
+            const machineList = document.querySelectorAll(".machine-list li");
+            machineList.forEach((machine) => {
+                machine.classList.remove("selected");
+            });
+            machineElement.classList.add("selected");
+        }
+
         function openOccupancyPopup() {
             var popupOptions = "width=800, height=600"; // Adjust the size as needed
             window.open("occupancy2.html", "OccupancyPopup", popupOptions);

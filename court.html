@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Machine - McComas Gym</title>
+    <title>Reserve a Court - McComas Gym</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         html {
@@ -19,8 +18,7 @@
             font-family: Arial, sans-serif;
         }
 
-        header,
-        footer {
+        header, footer {
             background-color: #800000;
             color: #fff;
             text-align: center;
@@ -51,8 +49,7 @@
             margin-right: 1rem;
         }
 
-        .login-button,
-        .logout-button {
+        .login-button, .logout-button {
             background-color: #007BFF;
             color: #fff;
             border: none;
@@ -60,8 +57,7 @@
             cursor: pointer;
         }
 
-        .login-button:hover,
-        .logout-button:hover {
+        .login-button:hover, .logout-button:hover {
             background-color: #0056b3;
         }
 
@@ -69,28 +65,23 @@
             color: #ff6600;
         }
 
-        .machine-list ul {
+        .court-list ul {
             list-style: none;
             padding: 0;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
         }
 
-        .machine-list li {
+        .court-list li {
             text-align: center;
             padding: 10px;
-            background-color: #f0f0f0;
             border: 1px solid #ddd;
             border-radius: 5px;
+            margin: 10px;
             cursor: pointer;
         }
 
-        .machine-list li.selected {
+        .court-list li.selected {
             background-color: #6a3122;
-            /* Selected background color */
             color: #fff;
-            /* Text color for selected class */
         }
 
         a {
@@ -108,7 +99,7 @@
         }
 
         .booking-button {
-            background-color: #ff6600;
+            background-color: #704d36;
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -117,7 +108,7 @@
         }
 
         .booking-button:hover {
-            background-color: #e65500;
+            background-color: #533829;
         }
 
         .booking-form label {
@@ -125,7 +116,6 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         <h1>McComas Gym</h1>
@@ -143,33 +133,21 @@
     </header>
 
     <main class="booking">
-        <h2>Book a Machine</h2>
-        <p>Reserve a machine for your workout session at McComas Gym. Choose from a variety of machines to meet your fitness needs.</p>
-        <div class="machine-list">
+        <h2>Reserve a Court</h2>
+        <p>Book a court for various sports activities at McComas Gym. Choose from the available sports and court types below:</p>
+        <div class="court-list">
             <ul>
-                <li onclick="selectMachine(this)"><a href="#">Chest Press Machine</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Treadmill</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Elliptical Trainer</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Leg Press Machine</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Rowing Machine</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Stationary Bike</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Dumbbell Rack</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Pull-Up Bar</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Smith Machine</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Lat Pulldown Machine</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Leg Extension Machine</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Shoulder Press Machine</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Abdominal Bench</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Leg Curl Machine</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Seated Row Machine</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Bench Press Rack</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Barbell Squat Rack</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Cardio Step Machine</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Preacher Curl Bench</a></li>
-                <li onclick="selectMachine(this)"><a href="#">Hip Thrust Machine</a></li>
+                <li onclick="selectCourt(this)"><a href="#">Basketball Court</a></li>
+                <li onclick="selectCourt(this)"><a href="#">Volleyball Court</a></li>
+                <li onclick="selectCourt(this)"><a href="#">Badminton Court</a></li>
+                <li onclick="selectCourt(this)"><a href="#">Tennis Court</a></li>
+                <li onclick="selectCourt(this)"><a href="#">Soccer Field</a></li>
+                <li onclick="selectCourt(this)"><a href="#">Swimming Pool</a></li>
+                <li onclick="selectCourt(this)"><a href="#">Baseball Field</a></li>
+                <li onclick="selectCourt(this)"><a href="#">Squash Court</a></li>
+                <li onclick="selectCourt(this)"><a href="#">Racquetball Court</a></li>
             </ul>
         </div>
-        <a href="occupancy.html" onclick="openOccupancyPopup(); return false;">Check Occupancy</a>
 
         <div class="booking-form">
             <h3>Booking Details</h3>
@@ -196,7 +174,7 @@
             <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
         </div>
-        <div class "footer-info">
+        <div class="footer-info">
             <p>&copy; 2023 McComas Gym. All Rights Reserved.</p>
             <p>895 Washington St SW, Blacksburg, VA 24060</p>
             <p>Contact: recsports@vt.edu | Phone: (540) 231-6856</p>
@@ -209,19 +187,13 @@
             window.location.href = "index.html";
         }
 
-        function selectMachine(machineElement) {
-            const machineList = document.querySelectorAll(".machine-list li");
-            machineList.forEach((machine) => {
-                machine.classList.remove("selected");
+        function selectCourt(courtElement) {
+            const courtList = document.querySelectorAll(".court-list li");
+            courtList.forEach((court) => {
+                court.classList.remove("selected");
             });
-            machineElement.classList.add("selected");
-        }
-
-        function openOccupancyPopup() {
-            var popupOptions = "width=800, height=600"; // Adjust the size as needed
-            window.open("occupancy.html", "OccupancyPopup", popupOptions);
+            courtElement.classList.add("selected");
         }
     </script>
 </body>
-
 </html>

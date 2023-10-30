@@ -7,12 +7,13 @@
     <title>McComas Gym</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body {
+        /* body {
             background-image: url('background.jpg');
             background-size: cover;
             background-position: center;
-        }
+        } */
 
         .cta {
             text-align: center;
@@ -22,6 +23,11 @@
             padding: 20px;
             border-radius: 10px;
             /* Rounded corners for the container */
+        }
+
+        .occupancy-chart {
+            max-width: 1200px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -37,7 +43,6 @@
                 <li><a href="class.html">Book a Class</a></li>
                 <li><a href="occupancydata.html">Real Time Occupancy</a></li>
                 <li><a href="court.html">Reserve a Court</a></li>
-
             </ul>
         </nav>
         <!-- Replace the following with your login/logout logic -->
@@ -46,11 +51,14 @@
     </header>
     <main>
         <div class="cta">
-            <p>Reserve a slot for a class today!</p>
-            <a class="cta-button" href="class.html">Book a Class</a>
-            <p>Explore our wide range of fitness classes to stay active and healthy.</p>
-            <a class="cta-button" href="book.html">Book a machine</a>
+            <p>Real time occupancy chart!</p>
+            <!-- <a class="cta-button" href="class.html">Book a Class</a> -->
+            <p>Shows the number of gym users in McCommas at a particular time.</p>
+            <!-- <a class="cta-button" href="book.html">Book a machine</a> -->
             <p>Get pumped with a set of fitness machines and stop waiting in lines.</p>
+        </div>
+        <div class="occupancy-chart">
+            <canvas id="occupancyGraph"></canvas>
         </div>
     </main>
 
@@ -77,6 +85,34 @@
             alert('Logout button clicked');
             window.location.href = "index.html";
         }
+
+        // Dummy data for occupancy graph
+        const labels = ['8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM'];
+        const data = [30, 40, 35, 45, 50, 60];
+
+        // Create the occupancy graph
+        const ctx = document.getElementById('occupancyGraph').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Occupancy',
+                    data: data,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2,
+                    fill: false,
+                }],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        suggestedMax: 100,
+                    },
+                },
+            },
+        });
     </script>
 </body>
 
